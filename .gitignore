@@ -1,0 +1,11 @@
+# Configuración privada
+config.local.php
+.env
+
+# Editor
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
