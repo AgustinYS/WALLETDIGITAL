@@ -1,2 +1,3 @@
 # WALLETDIGITAL
-Billetera digital para controlar gastos
+Proyecto WALLETDIGITAL - cambio desde rama main
+hola
