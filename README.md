@@ -6,6 +6,8 @@ Aplicación web para gestionar y controlar gastos personales.
 
 - Kevin Ramos
 - Agustín Yáñez
+- Eduardo Erazo
+- Basthian Reyes
 
 ## Tecnologías utilizadas
 
