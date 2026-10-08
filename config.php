@@ -69,5 +69,6 @@ function supabaseRequest($tabla, $metodo = 'GET', $datos = null, $query = '')
     return [
         'status' => $codigo,
         'data' => json_decode($respuesta, true)
+        
     ];
 }
