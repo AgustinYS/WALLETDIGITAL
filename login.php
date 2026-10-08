@@ -1,3 +1,4 @@
+
 <?php
 
 require_once 'config.php';
@@ -164,12 +165,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="campo">
 
-                <label>
+                <label for="email">
                     Correo electrónico
                 </label>
 
                 <input
                     type="email"
+                    id="email"
                     name="email"
                     placeholder="correo@ejemplo.com"
                     value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
@@ -183,12 +185,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="campo">
 
-                <label>
+                <label for="password">
                     Contraseña
                 </label>
 
                 <input
                     type="password"
+                    id="password"
                     name="password"
                     placeholder="Tu contraseña"
                     required
