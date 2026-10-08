@@ -1,3 +1,4 @@
+
 <?php
 require_once 'config.php';
 
@@ -260,12 +261,15 @@ function formatoDinero($valor)
 
         <form method="POST">
 
-            <label>
+            <!-- CAMPO CORREGIDO -->
+
+            <label for="presupuesto">
                 Nuevo presupuesto
             </label>
 
             <input
                 type="number"
+                id="presupuesto"
                 name="presupuesto"
                 min="0"
                 step="1"
