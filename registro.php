@@ -1,3 +1,4 @@
+
 <?php
 require_once 'config.php';
 
@@ -93,12 +94,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <form method="POST">
 
+            <!-- NOMBRE CORREGIDO -->
+
             <div class="campo">
 
-                <label>Nombre</label>
+                <label for="nombre">
+                    Nombre
+                </label>
 
                 <input
                     type="text"
+                    id="nombre"
                     name="nombre"
                     placeholder="Tu nombre"
                     required
@@ -107,12 +113,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
 
+            <!-- CORREO CORREGIDO -->
+
             <div class="campo">
 
-                <label>Correo electrónico</label>
+                <label for="email">
+                    Correo electrónico
+                </label>
 
                 <input
                     type="email"
+                    id="email"
                     name="email"
                     placeholder="correo@ejemplo.com"
                     required
@@ -121,12 +132,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
 
+            <!-- CONTRASEÑA CORREGIDA -->
+
             <div class="campo">
 
-                <label>Contraseña</label>
+                <label for="password">
+                    Contraseña
+                </label>
 
                 <input
                     type="password"
+                    id="password"
                     name="password"
                     placeholder="Contraseña"
                     minlength="6"
