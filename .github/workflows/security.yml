@@ -1,0 +1,30 @@
+name: Evaluacion de Seguridad de Contenedores
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  seguridad:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Control 1 - Analisis estatico del Dockerfile (Hadolint)
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: Dockerfile
+          failure-threshold: error
+
+      - name: Control 2 - Construir la imagen del contenedor
+        run: docker build -t walletdigital:latest .
+
+      - name: Control 3 - Escaneo de vulnerabilidades con Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: walletdigital:latest
+          format: 'table'
+          severity: 'CRITICAL,HIGH'
+          exit-code: '0'
